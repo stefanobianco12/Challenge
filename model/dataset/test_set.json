@@ -1,0 +1,14 @@
+[
+    {
+        "comment": "The delivery was a nightmare, and the food was equally dreadful. Disappointing experience overall, wouldn't recommend.",
+        "foodRating": 1,
+        "deliveryRating": 1,
+        "approval": true
+    },
+    {
+        "comment": "Loved the meal! Unfortunately, the delivery time was much longer than expected. Great flavors, though.",
+        "foodRating": 4,
+        "deliveryRating": 1,
+        "approval": true
+    }
+]

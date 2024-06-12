@@ -1,0 +1,63 @@
+[
+    {
+        "comment": "Delivery was horrendous, and the food tasted awful. Regret ordering from here.",
+        "foodRating": 1,
+        "deliveryRating": 1,
+        "approval": 1
+    },
+    {
+        "comment": "Terrible delivery, and the food was inedible. Complete waste of money.",
+        "foodRating": 4,
+        "deliveryRating": 1,
+        "approval": 0
+    },
+    {
+        "comment": "Delivery was abysmal, and the food was tasteless. Absolutely dreadful.",
+        "foodRating": 1,
+        "deliveryRating": 1,
+        "approval": 1
+    },
+    {
+        "comment": "The delivery was average, nothing exceptional. Sadly, the food didn't live up to expectations. Disappointing overall experience.",
+        "foodRating": 2,
+        "deliveryRating": 3,
+        "approval": 1
+    },
+    {
+        "comment": "The food was below par, and the delivery was just okay. Wouldn't order from here again.",
+        "foodRating": 2,
+        "deliveryRating": 3,
+        "approval": 0
+    },
+    {
+        "comment": "Decent delivery, but the food was lackluster. Expected better quality for the price.",
+        "foodRating": 2,
+        "deliveryRating": 3,
+        "approval": 1
+    }
+    ,
+    {
+        "comment": "Delivery was alright, but the food was a letdown. Expected more flavor and freshness.",
+        "foodRating": 2,
+        "deliveryRating": 3,
+        "approval": 1
+    },
+    {
+        "comment": "The food was fantastic, but the delivery was painfully slow. Definitely worth the wait, but be prepared for a long one.",
+        "foodRating": 4,
+        "deliveryRating": 1,
+        "approval": 1
+    },
+    {
+        "comment": "Amazing dishes, but the delivery lagged significantly. I wish it had arrived sooner to enjoy it hot.",
+        "foodRating": 4,
+        "deliveryRating": 1,
+        "approval": 1
+    },
+    {
+        "comment": "Delicious food, but the delivery took forever. The flavors were great once it finally arrived.",
+        "foodRating": 4,
+        "deliveryRating": 1,
+        "approval": 0
+    }
+]

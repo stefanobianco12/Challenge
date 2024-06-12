@@ -1,0 +1,14 @@
+[
+    {
+        "comment": "Delivery was horrendous, and the food tasted awful. Regret ordering from here.",
+        "foodRating": 1,
+        "deliveryRating": 1,
+        "approval": 1
+    },
+    {
+        "comment": "Mediocre delivery time, and the food was subpar. Not worth the hassle.",
+        "foodRating": 2,
+        "deliveryRating": 3,
+        "approval": 1
+    }
+]
