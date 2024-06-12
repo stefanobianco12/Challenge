@@ -24,7 +24,7 @@ class Controller():
         input_ids, attention_mask = self.preprocess_text(text)
         with torch.no_grad():
             food_rating, delivery_rating, approval_prob = self.model(input_ids, attention_mask)
-        food_probs,delivery_probs,approval_prob=self.from_logits(food_rating, delivery_rating, approval_prob)
+        food_probs,delivery_probs,approval_prob=self.model.from_logits(food_rating, delivery_rating, approval_prob)
         food_rating = torch.argmax(food_probs, dim=1).item() + 1  # Convert to rating scale 1-5
         delivery_rating = torch.argmax(delivery_probs, dim=1).item() + 1
         approval = 1 if approval_prob.item() > 0.5 else 0

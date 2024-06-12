@@ -13,7 +13,7 @@ import com.google.gson.Gson;
 
 
 public class ModelEvaluator {
-    private static final String TEST_DATA_FILE = "src/main/resources/test_set.json";;
+    private static final String TEST_DATA_FILE = "EvaluatorReview/src/main/resources/test_set.json";;
     private static final String MODEL_API_URL = "http://localhost:5000/predict";
     private static final HttpClient client = HttpClient.newHttpClient();
     private static final Gson gson = new Gson();
@@ -32,9 +32,9 @@ public class ModelEvaluator {
                 .build();
 
         HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
-        return gson.fromJson(response.body(), Prediction.class);
+        Prediction prediction=gson.fromJson(response.body(), Prediction.class);
+        return prediction;
     }
-
     public static void main(String[] args) throws IOException, InterruptedException {
 
         List<Review> reviews = gson.fromJson(new FileReader(TEST_DATA_FILE), new com.google.gson.reflect.TypeToken<List<Review>>() {}.getType());
