@@ -30,11 +30,15 @@ In a real scenario, the service, the scheduler and the evaluation model applicat
 After, the containereized applications are deployed and managed on a Kubernetes cluster.
 
 ## Run
-As first, run the API service:
+As first, run the API service on a terminal:
 <pre>
-```python
-py /model/controller.py
-```
+pip install -r ./model/requirements.txt
+py ./model/controller.py
 </pre>
+run the job scheduler on another terminal:
+<pre>
+py ./model/scheduler.py
+</pre>
+For the EvaluatorReview application, it runs on an Java IDE, possibily on Intellij. If necessary, export the Jar library: com.google.code.gson
 
 
