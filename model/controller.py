@@ -28,10 +28,9 @@ class Controller():
         food_rating = torch.argmax(food_probs, dim=1).item() + 1  # Convert to rating scale 1-5
         delivery_rating = torch.argmax(delivery_probs, dim=1).item() + 1
         approval = 1 if approval_prob.item() > 0.5 else 0
-        reliability = approval_prob.item()
-        print(food_rating)
-        print(delivery_rating)
-        print(approval)
+        reliability = abs(approval_prob.item()-0.5)
+        print(type(food_rating))
+
         return {
             'foodRating':food_rating,
             'deliveryRating':delivery_rating,

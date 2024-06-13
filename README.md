@@ -39,13 +39,16 @@ The Java application evaluator iteratively sends one review at time, since the t
 ## Run
 As first, run the API service on a terminal:
 <pre>
-pip install -r ./model/requirements.txt
-py ./model/controller
+cd model
+pip install -r requirements.txt
+py controller.py
 </pre>
 run the job scheduler on another terminal:
 <pre>
-py ./model/scheduler
+cd model
+py scheduler.py
 </pre>
+A better approach for the initialization of the trainer object is using a XML or JSON configuration file where are saved the hyperparameter values and the validation threshold.<br>
 For the EvaluatorReview application, it runs on an Java IDE, possibily on Intellij. If necessary, export the Jar library: com.google.code.gson
 
 
