@@ -23,21 +23,28 @@ For each strategies is important to build a balanced dataset, in particular the 
 <br>
 For simplicity I followed the second strategies, where i made a query to generate a review for food and delivery could be a food and deliery rating X Y.
 
+## Evaluation metric
+For simplicy, I consider the accuracy metric individually for each task: food rating, delivery rating and approval.<br>
+Other metric can be computed such as precision, recall, F1.
+
 ## Deployment & tools
 In my setup the model prediction function is exposed by a RESTful API service using the Flask library. Since the service has to interarct with different distributed modules the best option is to deploy with REST, it is a lightweight protocol, flexible and easy to use it.<br>
 <br>
 In a real scenario, the service, the scheduler and the evaluation model application  are containerized using Docker. This ensures that they  can run in any environment that supports Docker, making it easier to integrate with various applications.<br>
-After, the containereized applications are deployed and managed on a Kubernetes cluster.
+After, the containereized applications are deployed on a Kubernetes cluster, where manages the load balacing. The REST API service is exsposed on a kubernetes node to communicate to the outside the cluster.<br>
+<br>
+The Java application evaluator iteratively sends one review at time, since the test set can be large it is a strong limitation. One possible solution is to use the network file system of Kubernets, for sharing the dataset across pods or nodes. So the evaluator controller triggers only the evaluation test set phase.
+
 
 ## Run
 As first, run the API service on a terminal:
 <pre>
 pip install -r ./model/requirements.txt
-py ./model/controller.py
+py ./model/controller
 </pre>
 run the job scheduler on another terminal:
 <pre>
-py ./model/scheduler.py
+py ./model/scheduler
 </pre>
 For the EvaluatorReview application, it runs on an Java IDE, possibily on Intellij. If necessary, export the Jar library: com.google.code.gson
 
