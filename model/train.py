@@ -114,7 +114,7 @@ class Trainer():
         print(f'Food Accuracy: {food_accuracy}, Delivery Accuracy: {delivery_accuracy}, Approval Accuracy: {approval_accuracy}')
 
         if food_accuracy>= self.threshold and delivery_accuracy >= self.threshold and approval_accuracy >= approval_accuracy:
-            torch.save(self.model.state_dict(), 'model.pth')
+            torch.save(self.model.state_dict(), 'trained_models/model.pth')
             self.send_trigger_update()
 
 

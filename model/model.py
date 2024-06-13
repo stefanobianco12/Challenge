@@ -13,7 +13,6 @@ class ReviewModel(nn.Module):
 
     def forward(self, input_ids, attention_mask):
         outputs = self.bert_model(input_ids, attention_mask=attention_mask)
-        #pooled_output = outputs.pooler_output
         pooled_output = outputs[1]  # [CLS] token's output
 
         food_logits = self.food_rating_head(pooled_output)
